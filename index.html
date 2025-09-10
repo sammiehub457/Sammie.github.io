@@ -63,6 +63,16 @@
             background: #f8f9fa; 
             border-radius: 8px;
         }
+        .backup-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+        }
         @media (max-width: 768px) {
             iframe {
                 height: 300px;
@@ -86,15 +96,20 @@
             <p>3. 确保网络连接稳定 | Ensure stable internet connection</p>
         </div>
 
-        <!-- 中文视频部分 -->
+        <!-- 中文视频部分 - 已修复链接 -->
         <div class="video-container">
             <div class="video-title">中文培训 Chinese Training</div>
-            <iframe src="//player.bilibili.com/player.html?bvid=BV135HDzaEPt&high_quality=1&autoplay=0&vd_source=50d0f5558166a85bb70dcc9fcd62a3b9&page=1" 
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV135HDzaEPt&high_quality=1&autoplay=0&page=1" 
                     scrolling="no" 
                     frameborder="no" 
                     allowfullscreen="true">
             </iframe>
             <p class="note">*推荐中国大陆用户观看此版本</p>
+            <a href="https://www.bilibili.com/video/BV135HDzaEPt" 
+               target="_blank" 
+               class="backup-link">
+                🔗 如果无法播放，请点击这里直接访问B站
+            </a>
         </div>
 
         <div class="divider"></div>
@@ -108,20 +123,6 @@
                     allowfullscreen>
             </iframe>
             <p class="note">*Recommended for overseas users</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- 备用下载链接 -->
-        <div style="text-align: center; margin-top: 30px;">
-            <h3>备用下载链接 / Alternative Download Links</h3>
-            <p>
-                <a href="https://stevemadden-my.sharepoint.com/:v:/p/robichou/EZE1HtSvmElOrXC-Wz0uRbIBEUoCOGN7_xurIPS0Ct6Qgg?e=g2t7Hi" 
-                   target="_blank" 
-                   style="color: #3498db; text-decoration: none;">
-                    📥 下载英文视频（如果无法播放） / Download English Video (if unavailable)
-                </a>
-            </p>
         </div>
     </div>
 </body>
