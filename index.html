@@ -65,13 +65,29 @@
         }
         .backup-link {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #e74c3c;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #3498db;
             color: white;
             text-decoration: none;
             border-radius: 6px;
             font-size: 14px;
+            transition: background 0.3s;
+        }
+        .backup-link:hover {
+            background: #2980b9;
+        }
+        .backup-link.chinese {
+            background: #e74c3c;
+        }
+        .backup-link.chinese:hover {
+            background: #c0392b;
+        }
+        .backup-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
         }
         @media (max-width: 768px) {
             iframe {
@@ -80,6 +96,10 @@
             .container {
                 padding: 20px;
                 margin: 10px;
+            }
+            .backup-link {
+                padding: 10px 20px;
+                font-size: 13px;
             }
         }
     </style>
@@ -96,7 +116,7 @@
             <p>3. 确保网络连接稳定 | Ensure stable internet connection</p>
         </div>
 
-        <!-- 中文视频部分 - 已修复链接 -->
+        <!-- 中文视频部分 -->
         <div class="video-container">
             <div class="video-title">中文培训 Chinese Training</div>
             <iframe src="https://player.bilibili.com/player.html?bvid=BV135HDzaEPt&high_quality=1&autoplay=0&page=1" 
@@ -105,11 +125,21 @@
                     allowfullscreen="true">
             </iframe>
             <p class="note">*推荐中国大陆用户观看此版本</p>
-            <a href="https://www.bilibili.com/video/BV135HDzaEPt" 
-               target="_blank" 
-               class="backup-link">
-                🔗 如果无法播放，请点击这里直接访问B站
-            </a>
+            
+            <!-- 中文备用下载链接 -->
+            <div class="backup-container">
+                <h4>备用下载链接 | Alternative Download Links</h4>
+                <a href="https://stevemadden-my.sharepoint.com/:v:/p/robichou/Ecx6JehIzKhFhPJjjTMCf4IBBFSPbWh4wpvPru35yBYx_A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=bGppJ2" 
+                   target="_blank" 
+                   class="backup-link chinese">
+                    📥 下载中文视频 | Download Chinese Video
+                </a>
+                <a href="https://www.bilibili.com/video/BV135HDzaEPt" 
+                   target="_blank" 
+                   class="backup-link">
+                    🔗 直接访问B站 | Visit Bilibili
+                </a>
+            </div>
         </div>
 
         <div class="divider"></div>
@@ -123,6 +153,21 @@
                     allowfullscreen>
             </iframe>
             <p class="note">*Recommended for overseas users</p>
+            
+            <!-- 英文备用下载链接 -->
+            <div class="backup-container">
+                <h4>备用下载链接 | Alternative Download Links</h4>
+                <a href="https://stevemadden-my.sharepoint.com/:v:/p/robichou/EZE1HtSvmElOrXC-Wz0uRbIBEUoCOGN7_xurIPS0Ct6Qgg?e=g2t7Hi" 
+                   target="_blank" 
+                   class="backup-link">
+                    📥 下载英文视频 | Download English Video
+                </a>
+                <a href="https://youtu.be/YraoC4LOOwU" 
+                   target="_blank" 
+                   class="backup-link">
+                    🔗 直接访问YouTube | Visit YouTube
+                </a>
+            </div>
         </div>
     </div>
 </body>
