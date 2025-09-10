@@ -56,6 +56,13 @@
             font-size: 14px;
             margin-top: 10px;
         }
+        .tips-box {
+            text-align: center; 
+            margin: 30px 0; 
+            padding: 15px; 
+            background: #f8f9fa; 
+            border-radius: 8px;
+        }
         @media (max-width: 768px) {
             iframe {
                 height: 300px;
@@ -72,10 +79,17 @@
         <h1>培训视频 - Training Videos</h1>
         <p class="subtitle">请选择您的语言进行观看 | Please select your language to watch</p>
 
+        <div class="tips-box">
+            <h4>💡 获取最佳观看体验 Tips for Best Viewing Experience:</h4>
+            <p>1. 点击视频右下角的「全屏」按钮 | Click the fullscreen button</p>
+            <p>2. 使用齿轮图标 ⚙️ 选择「1080P」高清画质 | Use the gear icon to select 1080p HD</p>
+            <p>3. 确保网络连接稳定 | Ensure stable internet connection</p>
+        </div>
+
         <!-- 中文视频部分 -->
         <div class="video-container">
             <div class="video-title">中文培训 Chinese Training</div>
-            <iframe src="//player.bilibili.com/player.html?bvid=BV135HDzaEPt&vd_source=50d0f5558166a85bb70dcc9fcd62a3b9&high_quality=1&autoplay=0" 
+            <iframe src="//player.bilibili.com/player.html?bvid=BV135HDzaEPt&high_quality=1&autoplay=0&vd_source=50d0f5558166a85bb70dcc9fcd62a3b9&page=1" 
                     scrolling="no" 
                     frameborder="no" 
                     allowfullscreen="true">
@@ -88,7 +102,7 @@
         <!-- 英文视频部分 -->
         <div class="video-container">
             <div class="video-title">English Training</div>
-            <iframe src="https://www.youtube.com/embed/NJ5OSiELI3I" 
+            <iframe src="https://www.youtube.com/embed/YraoC4LOOwU?high_quality=1&vq=hd1080" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
