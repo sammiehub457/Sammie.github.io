@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>培训视频 - Training Videos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .video-container {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .video-title {
+            color: #34495e;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 50px 0;
+        }
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .note {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            iframe {
+                height: 300px;
+            }
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>培训视频 - Training Videos</h1>
+        <p class="subtitle">请选择您的语言进行观看 | Please select your language to watch</p>
+
+        <!-- 中文视频部分 -->
+        <div class="video-container">
+            <div class="video-title">中文培训 Chinese Training</div>
+            <iframe src="//player.bilibili.com/player.html?bvid=BV135HDzaEPt&vd_source=50d0f5558166a85bb70dcc9fcd62a3b9&high_quality=1&autoplay=0" 
+                    scrolling="no" 
+                    frameborder="no" 
+                    allowfullscreen="true">
+            </iframe>
+            <p class="note">*推荐中国大陆用户观看此版本</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 英文视频部分 -->
+        <div class="video-container">
+            <div class="video-title">English Training</div>
+            <iframe src="https://www.youtube.com/embed/NJ5OSiELI3I" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+            <p class="note">*Recommended for overseas users</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 备用下载链接 -->
+        <div style="text-align: center; margin-top: 30px;">
+            <h3>备用下载链接 / Alternative Download Links</h3>
+            <p>
+                <a href="https://stevemadden-my.sharepoint.com/:v:/p/robichou/EZE1HtSvmElOrXC-Wz0uRbIBEUoCOGN7_xurIPS0Ct6Qgg?e=g2t7Hi" 
+                   target="_blank" 
+                   style="color: #3498db; text-decoration: none;">
+                    📥 下载英文视频（如果无法播放） / Download English Video (if unavailable)
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
