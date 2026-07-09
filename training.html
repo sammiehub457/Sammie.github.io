@@ -112,6 +112,10 @@
             border-radius: 12px;
             overflow: hidden;
             position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .video-box iframe {
@@ -119,6 +123,19 @@
             height: 460px;
             border: none;
             display: block;
+        }
+
+        .video-box .placeholder {
+            color: #888;
+            font-size: 18px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .video-box .placeholder .big-icon {
+            font-size: 64px;
+            display: block;
+            margin-bottom: 16px;
         }
 
         .video-info {
@@ -183,6 +200,10 @@
                 height: 220px;
             }
 
+            .video-box {
+                min-height: 180px;
+            }
+
             .tab-btn {
                 font-size: 13px;
                 padding: 10px 12px;
@@ -210,36 +231,35 @@
             <button class="tab-btn" data-lang="en">🇬🇧 English</button>
         </div>
 
+        <!-- ===== 中文视频 ===== -->
         <div class="video-wrapper active" id="video-cn">
             <div class="video-box">
                 <iframe 
-                    src="https://player.bilibili.com/player.html?bvid=BV135HDzaEPt&high_quality=1&autoplay=0&page=1"
+                    src="https://player.bilibili.com/player.html?bvid=BV1FjMJ6kELi&high_quality=1&autoplay=0&page=1"
                     allowfullscreen>
                 </iframe>
             </div>
             <div class="video-info">
                 <div class="label">📌 <span>中文</span> 培训</div>
                 <div class="note">推荐中国大陆用户观看</div>
-                <a href="https://www.bilibili.com/video/BV135HDzaEPt" target="_blank" class="backup-link">
+                <a href="https://www.bilibili.com/video/BV1FjMJ6kELi/" target="_blank" class="backup-link">
                     🔗 备用链接：去 B站 观看 →
                 </a>
             </div>
         </div>
 
+        <!-- ===== 英文视频（暂未上传） ===== -->
         <div class="video-wrapper" id="video-en">
             <div class="video-box">
-                <iframe 
-                    src="https://www.youtube.com/embed/YraoC4LOOwU?autoplay=0&rel=0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                <div class="placeholder">
+                    <span class="big-icon">⏳</span>
+                    <p>英文培训视频即将上线</p>
+                    <p style="font-size:14px;color:#aaa;margin-top:8px;">English training video coming soon...</p>
+                </div>
             </div>
             <div class="video-info">
                 <div class="label">📌 <span>English</span> Training</div>
-                <div class="note">Recommended for overseas users</div>
-                <a href="https://www.youtube.com/watch?v=YraoC4LOOwU" target="_blank" class="backup-link">
-                    🔗 Backup: Watch on YouTube →
-                </a>
+                <div class="note">Coming soon</div>
             </div>
         </div>
 
