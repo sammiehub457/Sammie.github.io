@@ -1,292 +1,122 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>培训视频中心</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background: #f5f7fa;
-            color: #1a1a2e;
-            padding: 30px 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 40px 35px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .header h1 {
-            font-size: 30px;
-            font-weight: 700;
-            color: #1a1a2e;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 16px;
-            margin-top: 8px;
-        }
-
-        .header .badge {
-            display: inline-block;
-            background: #eef2ff;
-            color: #4f46e5;
-            font-size: 13px;
-            padding: 4px 14px;
-            border-radius: 20px;
-            margin-top: 10px;
-            font-weight: 500;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 6px;
-            background: #f1f3f5;
-            padding: 5px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 12px 20px;
-            border: none;
-            background: transparent;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-
-        .tab-btn:hover {
-            color: #1a1a2e;
-        }
-
-        .tab-btn.active {
-            background: #ffffff;
-            color: #1a1a2e;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .video-wrapper {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .video-wrapper.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .video-box {
-            background: #0a0a0a;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .video-box iframe {
-            width: 100%;
-            height: 460px;
-            border: none;
-            display: block;
-        }
-
-        .video-box .placeholder {
-            color: #888;
-            font-size: 18px;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .video-box .placeholder .big-icon {
-            font-size: 64px;
-            display: block;
-            margin-bottom: 16px;
-        }
-
-        .video-info {
-            margin-top: 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .video-info .label {
-            font-weight: 600;
-            font-size: 15px;
-            color: #1a1a2e;
-        }
-
-        .video-info .label span {
-            color: #4f46e5;
-        }
-
-        .video-info .note {
-            color: #888;
-            font-size: 14px;
-        }
-
-        .backup-link {
-            color: #4f46e5;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .backup-link:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            text-align: center;
-            font-size: 14px;
-            color: #999;
-        }
-
-        .footer a {
-            color: #4f46e5;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 16px;
-            }
-
-            .header h1 {
-                font-size: 22px;
-            }
-
-            .video-box iframe {
-                height: 220px;
-            }
-
-            .video-box {
-                min-height: 180px;
-            }
-
-            .tab-btn {
-                font-size: 13px;
-                padding: 10px 12px;
-            }
-
-            .video-info {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>培训视频 - Training Videos</title>
+<style>
+  :root{
+    --navy:#1f2d4a;
+    --gray:#5a6472;
+    --bg-panel:#f4f6f8;
+    --green:#3f7d3f;
+    --card-radius:16px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+    background:#eef1f4;
+    color:var(--navy);
+    padding:24px;
+  }
+  .container{
+    max-width:900px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:20px;
+    padding:40px 32px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  }
+  h1{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:8px;
+  }
+  .subtitle{
+    text-align:center;
+    color:var(--gray);
+    margin-bottom:32px;
+  }
+  .tips-box{
+    background:var(--bg-panel);
+    border-radius:var(--card-radius);
+    padding:28px 24px;
+    margin-bottom:40px;
+  }
+  .tips-box .tips-title{
+    text-align:center;
+    font-weight:bold;
+    font-size:1.1rem;
+    margin-bottom:20px;
+  }
+  .tips-box p{
+    text-align:center;
+    margin:10px 0;
+  }
+  h2.section-title{
+    text-align:center;
+    margin:36px 0 20px;
+  }
+  .video-card{
+    border-radius:var(--card-radius);
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.1);
+    margin-bottom:32px;
+  }
+  .video-wrapper{
+    position:relative;
+    width:100%;
+    padding-top:56.25%; /* 16:9 */
+    background:#000;
+  }
+  .video-wrapper iframe{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  .video-caption{
+    padding:12px 16px;
+    background:#fafafa;
+    font-size:0.9rem;
+    color:var(--gray);
+  }
+  @media (max-width:600px){
+    .container{padding:24px 16px;}
+    h1{font-size:1.5rem;}
+  }
+</style>
 </head>
 <body>
+  <div class="container">
+    <h1>培训视频 - Training Videos</h1>
+    <p class="subtitle">请选择您的语言进行观看 | Please select your language to watch</p>
 
-    <div class="container">
-
-        <div class="header">
-            <h1>📹 培训视频中心</h1>
-            <p>选择语言版本观看对应培训内容</p>
-            <span class="badge">双语支持 · 中 / EN</span>
-        </div>
-
-        <div class="tabs">
-            <button class="tab-btn active" data-lang="cn">🇨🇳 中文版</button>
-            <button class="tab-btn" data-lang="en">🇬🇧 English</button>
-        </div>
-
-        <!-- ===== 中文视频 ===== -->
-        <div class="video-wrapper active" id="video-cn">
-            <div class="video-box">
-                <iframe 
-                    src="https://player.bilibili.com/player.html?bvid=BV1FjMJ6kELi&high_quality=1&autoplay=0&page=1"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <div class="video-info">
-                <div class="label">📌 <span>中文</span> 培训</div>
-                <div class="note">推荐中国大陆用户观看</div>
-                <a href="https://www.bilibili.com/video/BV1FjMJ6kELi/" target="_blank" class="backup-link">
-                    🔗 备用链接：去 B站 观看 →
-                </a>
-            </div>
-        </div>
-
-        <!-- ===== 英文视频（暂未上传） ===== -->
-        <div class="video-wrapper" id="video-en">
-            <div class="video-box">
-                <div class="placeholder">
-                    <span class="big-icon">⏳</span>
-                    <p>英文培训视频即将上线</p>
-                    <p style="font-size:14px;color:#aaa;margin-top:8px;">English training video coming soon...</p>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="label">📌 <span>English</span> Training</div>
-                <div class="note">Coming soon</div>
-            </div>
-        </div>
-
-        <div class="footer">
-            部署于 <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
-            &nbsp;·&nbsp; 2026
-        </div>
-
+    <div class="tips-box">
+      <div class="tips-title">💡 获取最佳观看体验 Tips for Best Viewing Experience:</div>
+      <p>1. 点击视频右下角的「全屏」按钮 | Click the fullscreen button</p>
+      <p>2. 使用齿轮图标 ⚙️ 选择「1080P」高清画质 | Use the gear icon to select 1080p HD</p>
+      <p>3. 确保网络连接稳定 | Ensure stable internet connection</p>
     </div>
 
-    <script>
-        const tabs = document.querySelectorAll('.tab-btn');
+    <h2 class="section-title">中文培训 Chinese Training</h2>
 
-        tabs.forEach(btn => {
-            btn.addEventListener('click', function() {
-                tabs.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://player.bilibili.com/player.html?bvid=BV1FjMJ6kELi&page=1&high_quality=1&danmaku=0&autoplay=0"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true">
+        </iframe>
+      </div>
+      <div class="video-caption">Steve Madden Responsible Recrument Policy Training_20260709</div>
+    </div>
 
-                document.querySelectorAll('.video-wrapper').forEach(w => {
-                    w.classList.remove('active');
-                });
+    <!-- 如需添加更多视频，复制上面的 .video-card 区块，并替换 bvid 和标题即可 -->
 
-                const lang = this.getAttribute('data-lang');
-                document.getElementById('video-' + lang).classList.add('active');
-            });
-        });
-    </script>
-
+  </div>
 </body>
 </html>
