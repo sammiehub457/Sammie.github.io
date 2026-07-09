@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>培训视频 - Training Videos</title>
+<style>
+  :root{
+    --navy:#1f2d4a;
+    --gray:#5a6472;
+    --bg-panel:#f4f6f8;
+    --green:#3f7d3f;
+    --card-radius:16px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+    background:#eef1f4;
+    color:var(--navy);
+    padding:24px;
+  }
+  .container{
+    max-width:900px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:20px;
+    padding:40px 32px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  }
+  h1{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:8px;
+  }
+  .subtitle{
+    text-align:center;
+    color:var(--gray);
+    margin-bottom:32px;
+  }
+  .tips-box{
+    background:var(--bg-panel);
+    border-radius:var(--card-radius);
+    padding:28px 24px;
+    margin-bottom:40px;
+  }
+  .tips-box .tips-title{
+    text-align:center;
+    font-weight:bold;
+    font-size:1.1rem;
+    margin-bottom:20px;
+  }
+  .tips-box p{
+    text-align:center;
+    margin:10px 0;
+  }
+  h2.section-title{
+    text-align:center;
+    margin:36px 0 20px;
+  }
+  .video-card{
+    border-radius:var(--card-radius);
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.1);
+    margin-bottom:32px;
+  }
+  .video-wrapper{
+    position:relative;
+    width:100%;
+    padding-top:56.25%; /* 16:9 */
+    background:#000;
+  }
+  .video-wrapper iframe{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  .video-caption{
+    padding:12px 16px;
+    background:#fafafa;
+    font-size:0.9rem;
+    color:var(--gray);
+  }
+  @media (max-width:600px){
+    .container{padding:24px 16px;}
+    h1{font-size:1.5rem;}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>培训视频 - Training Videos</h1>
+    <p class="subtitle">请选择您的语言进行观看 | Please select your language to watch</p>
+
+    <div class="tips-box">
+      <div class="tips-title">💡 获取最佳观看体验 Tips for Best Viewing Experience:</div>
+      <p>1. 点击视频右下角的「全屏」按钮 | Click the fullscreen button</p>
+      <p>2. 使用齿轮图标 ⚙️ 选择「1080P」高清画质 | Use the gear icon to select 1080p HD</p>
+      <p>3. 确保网络连接稳定 | Ensure stable internet connection</p>
+    </div>
+
+    <h2 class="section-title">中文培训 Chinese Training</h2>
+
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://player.bilibili.com/player.html?bvid=BV1FjMJ6kELi&page=1&high_quality=1&danmaku=0&autoplay=0"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true">
+        </iframe>
+      </div>
+      <div class="video-caption">Steve Madden Responsible Recrument Policy Training_20260709</div>
+    </div>
+
+    <!-- 如需添加更多视频，复制上面的 .video-card 区块，并替换 bvid 和标题即可 -->
+
+  </div>
+</body>
+</html>
